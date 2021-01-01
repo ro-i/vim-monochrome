@@ -36,3 +36,9 @@ Comments can optionally be rendered using italics:
 
 It is important that the flag is set before loading the theme.
 
+Consider enabling true colors in your `vimrc`/`init.vim`, e.g.:
+```
+if $COLORTERM == 'truecolor' && has('termguicolors')
+   set termguicolors
+endif
+```
