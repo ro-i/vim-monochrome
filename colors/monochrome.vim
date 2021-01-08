@@ -21,8 +21,9 @@ let s:cgray  = ['#737373', 243]
 let s:dgray  = ['#a8a8a8', 248]
 let s:sblue  = ['#5f87af', 67]
 let s:yellow = ['#ffff00', 226]
-let s:red    = ['#b72a2a', 160]
-let s:green  = ['#478226', 28]
+let s:bred   = ['#ff3636', 196] " bright red
+let s:dred   = ['#b72a2a', 160] " dark red
+let s:green  = ['#87ffaf', 121]
 
 let s:default_fg = s:lgray
 let s:default_bg = s:black
@@ -78,8 +79,8 @@ call s:hi('CursorLineNr', s:white, s:default_bg, s:bold)
 call s:hi('ColorColumn', s:default_fg, s:bgray)
 call s:hi('Search', s:white, s:sblue)
 call s:hi('Visual', s:default_lst, s:bgray)
-call s:hi('ErrorMsg', s:white, s:red)
-call s:hi('Error', s:white, s:red)
+call s:hi('ErrorMsg', s:white, s:dred)
+call s:hi('Error', s:white, s:dred)
 
 " Tildes at the bottom of a buffer, etc.
 call s:hi('NonText', s:dgray)
@@ -120,9 +121,9 @@ call s:hi('Statement', s:white, s:default_bg, s:bold)
 call s:hi('PreProc', s:white, s:default_bg, s:bold)
 call s:hi('String', s:sblue)
 call s:hi('Comment', s:cgray, s:default_bg, s:comment_attr)
-call s:hi('Constant', s:red)
+call s:hi('Constant', s:dred)
 call s:hi('Type', s:white, s:default_bg, s:bold)
-call s:hi('Function', s:white)
+call s:hi('Function')
 call s:hi('Identifier')
 call s:hi('Special')
 call s:hi('MatchParen', s:default_fg, s:dgray)
@@ -138,7 +139,7 @@ call s:hi('diffIndexLine', s:cgray)
 call s:hi('diffLine', s:cgray)
 call s:hi('diffSubname', s:cgray)
 call s:hi('diffAdded', s:white, s:green)
-call s:hi('diffRemoved', s:white, s:red)
+call s:hi('diffRemoved', s:white, s:dred)
 
 
 "
@@ -150,3 +151,10 @@ call s:hi('markdownHeadingDelimiter', s:white, s:default_bg, s:bold)
 call s:hi('markdownHeadingRule', s:white, s:default_bg, s:bold)
 call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
+
+"
+" --- coc.nvim -----------------------------------------------------------------
+"
+
+call s:hi('CocErrorSign', s:bred)
+call s:hi('CocErrorFloat', s:dred)
