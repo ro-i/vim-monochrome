@@ -20,6 +20,7 @@ let s:lgray  = ['#eeeeee', 255]
 let s:cgray  = ['#737373', 243]
 let s:dgray  = ['#a8a8a8', 248]
 let s:sblue  = ['#5f87af', 67]
+let s:dblue  = ['#003355', 25]
 let s:yellow = ['#ffff00', 226]
 let s:bred   = ['#ff3636', 196] " bright red
 let s:dred   = ['#b72a2a', 160] " dark red
@@ -30,6 +31,7 @@ let s:default_bg = s:black
 
 let s:italic    = 'italic'
 let s:bold      = 'bold'
+let s:inverse   = 'inverse'
 let s:underline = 'underline'
 let s:none      = 'NONE'
 
@@ -78,7 +80,7 @@ call s:hi('CursorLine', s:default_lst, s:bgray, s:none)
 call s:hi('CursorLineNr', s:white, s:default_bg, s:bold)
 call s:hi('ColorColumn', s:default_fg, s:bgray)
 call s:hi('Search', s:white, s:sblue)
-call s:hi('Visual', s:default_lst, s:bgray)
+call s:hi('Visual', s:default_lst, s:dblue)
 call s:hi('ErrorMsg', s:white, s:dred)
 call s:hi('Error', s:white, s:dred)
 
