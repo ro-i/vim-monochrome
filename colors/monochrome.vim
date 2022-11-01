@@ -160,3 +160,4 @@ call s:hi('markdownLinkText', s:sblue, s:default_bg, s:underline)
 
 call s:hi('CocErrorSign', s:bred)
 call s:hi('CocErrorFloat', s:dred)
+call s:hi('CocHintVirtualText', s:cgray)
